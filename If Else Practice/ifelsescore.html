@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+	<head>
+		<title>If else score grade </title>
+	</head>
+	<body>
+
+	<script>
+		let score = prompt("Enter any value bellow 100");
+		if(score == 100){
+			document.write(`Your score is ${score}. it's Superb.You got A grade`);
+		}else if (score > 100){
+			document.write(`please enter valid numbers`);
+		}else if (score >= 90){
+			document.write(`Your score is ${score}. it's Very Good.You got A grade`);
+		}else if (score >= 80){
+			document.write(`Your score is ${score}. it's Good.You got B grade`);
+		}else if (score >= 70){
+			document.write(`Your score is ${score}. it's Nice.You got C grade`);
+		}else if (score >= 60){
+			document.write(`Your score is ${score}. it's Good.You got D grade`);
+		}else if (score === null){
+			document.write(`please enter valid numbers`);
+		}else if(score < 35){
+			document.write(`Your score is ${score}.You fail in Exam`);	
+		}else{
+			document.write(`Your score is ${score}.You got E grade`);
+		}
+		
+	</script>
+	</body>
+</html>

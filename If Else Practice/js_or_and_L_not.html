@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Js </title>
+	</head>
+	<body>
+		<script>
+			let getValue = prompt("Please enter value between one to 4 ");
+
+			if(!getValue){
+				alert('Something wrong , Please enter valid value');
+			}else{
+				if(getValue == 'one' || getValue == '1' || getValue == 'ONE' || getValue == 'One' ){
+					console.log(`its first number`);
+				}else if( getValue == 'two' || getValue ==  '2' || getValue ==  'TWO' || getValue ==  'Two'){
+					console.log(`its Second number`);
+				}else if(getValue ==  'three' || getValue ==  '3' || getValue ==  'THREE' || getValue ==  'Three'){
+					console.log(`its Third number`);
+				}else if(getValue == 'four' || getValue == '4' || getValue == 'FOUR' || getValue == 'Four'){
+					console.log(`its fourth number`);
+				}else{
+					console.log(`Enter Valid Value`);
+				}
+			}
+
+
+			
+		</script>
+	</body>	
+</html>

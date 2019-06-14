@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+	<head>
+		<title>loop data even odd</title>
+	</head>
+	<body>
+		<script>
+			let getValue = prompt('Enter numaric value only');
+				let getEvenValue = 'Even = ';
+				let getOddValue = 'Odd = ';
+			for(let i = 1; i <= getValue; i++){
+				if(i % 2 == 0){
+					getEvenValue += i + ',' ;
+				}else{
+					getOddValue += i  + ','; 
+				}
+			}
+				console.log(getEvenValue);
+				console.log(getOddValue);
+
+
+				
+		</script>
+	</body>
+</html>
