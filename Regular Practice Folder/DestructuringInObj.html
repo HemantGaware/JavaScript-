@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            let x = {
+                food : 'Chinees',
+                personName: 'shinchan'
+            }
+            let {food,personName} = x;
+            alert(food);
+            alert(personName);
+
+
+            //on using array splite method we can unpack string value in to variables 
+            var [firstName, surname] = "Ilya Kantor".split(' ');
+            alert(firstName); //Ilya
+            alert(surname); // Kantor
+
+               // destructuring  is copy array value into variables. but array not itself it 
+             
+            
+                // if we use array to destructuring use unpack to array don't use object
+                // if we object destructuring use unpack using object 
+
+
+                // if you want to second value asssign to vaiable then skip it using comma 
+
+                var [firstName , , message] = ['Hemant' , 'Gaware' , "Hello i'm 20 years old" ]
+                alert(firstName);
+                alert(message);
+
+                //we can easily unpack array and object value to variables
+
+
+                //""""""""""""""""""""Object unpack""""""""""""""""""
+
+    </script>
+</body>
+</html>
