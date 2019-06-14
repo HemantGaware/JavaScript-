@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+    <head>
+       
+
+        <title>Array Tab Content</title>
+        <style>
+            li{
+                float: left;
+                padding: 12px;
+            }
+            ul{
+                padding: 20px 10px;
+                display: block;
+                font-size: 16px;
+                width: 100%;
+            }
+            div{
+                text-align: center;
+                font-size: 24px;
+                margin-top: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <ul type="none">
+            <li onclick="add(tab_li[0],cont_div[0]);"></li>
+            <li onclick="add(tab_li[1],cont_div[1]);"></li>
+            <li onclick="add(tab_li[2],cont_div[2]);"></li>
+            <li onclick="add(tab_li[3],cont_div[3]);"></li>
+        </ul>
+        <div ></div>
+        <div ></div>
+        <div ></div>
+        <div ></div>
+        <script>
+        
+
+
+            let tabs = ["Sanjay Dada", "Hemant" , "Gouri" ,"Vivek"];
+            let content = ["Manager In Fiserv ", "Web Developer in Gravity Business Services" , "Web Developer in Ojaswal Tech" ,"Searching Job"];
+            let tab_li = document.getElementsByTagName('li');
+            let cont_div =  document.getElementsByTagName('div');
+            for(let i = 0; i < 4; i++){
+                tab_li[i].innerText = tabs[i]; 
+                cont_div[i].innerText = content[i];
+                cont_div[i].style.display = "none";
+            }
+                tab_li[0].style.backgroundColor = "red";
+                cont_div[0].style.display = "block";
+
+            function add(tab_id, Cont_id){
+                for(let a = 0; a < 4; a++){
+                    if(Cont_id == cont_div[a] && tab_id == tab_li[a]){
+                        cont_div[a].style.display = "block";
+                        tab_li[a].style.backgroundColor = "Red";
+                    }else{
+                        cont_div[a].style.display = "none";
+                        tab_li[a].style.backgroundColor = "#fff";
+                    }
+                }
+            }
+            
+        </script>        
+    </body>
+</html>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Accordians</title>
+
+        <style>
+            div > div {
+                display: none;
+            }
+            .active{
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+
+
+        <div>
+            <h2 class="heading">Heading 1</h2>
+            <div class="active"> 
+                <p>Content OF First heading</p>
+            </div>
+        </div>
+
+        <div>
+            <h2 class="heading">Heading 2</h2>
+            <div>
+                <p>Content OF Second heading</p>
+            </div>
+        </div>
+
+        <div>
+            <h2 class="heading">Heading 3</h2>
+            <div>
+                <p>Content OF Third heading</p>
+            </div>
+        </div>
+
+        <script>
+
+       let heading = document.getElementsByClassName('heading');
+        for(let i = 0; i < document.getElementsByClassName('heading').length; i++ ){
+             heading[i].onclick =  see(heading[i].nextElementSibling,heading[i]);   
+        }
+        function see(x ,v) {
+            return function() {
+                acordian(x,v);
+            }
+        }
+
+       function acordian(pa,ds) {
+          let active =  document.getElementsByClassName('active');
+            if(active.lenght > 1){
+               for(let i = 0; i < active.length; i++){
+                active[i].classList.remove("active");
+               } 
+               pa.classList = 'active';
+            }else{
+                active[0].classList.remove("active");
+                pa.classList = 'active';
+            }
+        }
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+    <title> Show message onfocus - closure and loop  </title>
+</head>
+<body>
+
+    <p id="help">Enter Your details</p>
+    <input type="text" id="Name" placeholder="Your Name"/>
+    <input type="email" id="email" placeholder="Email"/>
+    <input type="tel" id="mobile" placeholder="Mobile Number"/>
+
+
+    <script>
+        function seehelp(help) {
+            document.getElementById('help').innerHTML = help;
+        }        
+        function see(help) {
+            return function() {
+                seehelp(help);
+            }            
+        }   
+        let test = [
+            {id: 'Name', msg: 'Please Enter Your Full Name'},
+            {id: 'email', msg: 'Please Enter Your Email'},
+            {id: 'mobile', msg: 'Please Enter Your Mobile Number'}
+        ]
+        function getCall() {
+            for(let i = 0; i < test.length; i++){
+                document.getElementById(test[i].id).onfocus =  see(test[i].msg); 
+            }
+        }
+
+        getCall();
+    </script>
+</body>
+</html>
